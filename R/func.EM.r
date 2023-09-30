@@ -83,8 +83,8 @@ func.EM <- function(dat, external.perturbation = NULL, ncpu=1,
     # }
     ## initialization
     sample.filter.iter <- dat.init$sample.filter
-    tmp <- css(t(dat.tss))$normFactors
-    #tmp <- biomassInit(dat.tss)
+    #tmp <- css(t(dat.tss))$normFactors
+    tmp <- biomassInit(dat.tss)
     if(is.null(m.init)) {
         m.iter <- scaling * tmp/median(tmp)
     }else{
